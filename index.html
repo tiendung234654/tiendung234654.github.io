@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Welcome to my website — a simple, accessible landing page." />
+    <title>Welcome | My Website</title>
+    <style>
+        :root{
+            --bg:#f7f7fb; --card:#fff; --text:#0f1724; --muted:#51607a; --accent:#2563eb; --radius:12px;
+        }
+        @media (prefers-color-scheme:dark){
+            :root{ --bg:#0b1220; --card:#08111a; --text:#e6eef8; --muted:#9fb0d1; --accent:#60a5fa; }
+        }
+        html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#e9eefb);color:var(--text);}
+        .container{max-width:960px;margin:4vh auto;padding:2rem;display:grid;gap:1.5rem}
+        header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+        .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
+        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+        nav a{color:var(--muted);text-decoration:none;margin-left:1rem;font-size:.95rem}
+        .hero{background:var(--card);padding:2rem;border-radius:var(--radius);box-shadow:0 6px 22px rgba(2,6,23,.06);display:grid;gap:1rem}
+        .title{font-size:1.6rem;font-weight:700;margin:0}
+        .lead{color:var(--muted);margin:0 0 .5rem}
+        .actions{display:flex;gap:.75rem;flex-wrap:wrap}
+        .btn{padding:.6rem 1rem;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+        .btn-primary{background:var(--accent);color:white;box-shadow:0 6px 18px rgba(2,6,23,.08)}
+        .btn-ghost{background:transparent;border:1px solid rgba(82,96,128,.12);color:var(--text)}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+        .card{background:var(--card);padding:1rem;border-radius:12px;border:1px solid rgba(2,6,23,.04);}
+        footer{font-size:.9rem;color:var(--muted);text-align:center;margin-top:.5rem}
+        .theme-toggle{background:transparent;border:none;color:var(--muted);cursor:pointer}
+        form{display:flex;gap:.5rem;margin-top:.5rem}
+        input[type="email"]{flex:1;padding:.55rem .7rem;border-radius:10px;border:1px solid rgba(2,6,23,.06);background:transparent;color:var(--text)}
+        @media (max-width:520px){.container{padding:1rem}}
+    </style>
+</head>
+<body>
+    <main class="container" role="main">
+        <header>
+            <a class="brand" href="#" aria-label="Homepage">
+                <div class="logo" aria-hidden="true">MW</div>
+                <div>
+                    <div style="font-weight:700">My Website</div>
+                    <div style="font-size:.85rem;color:var(--muted)">A friendly place on the web</div>
+                </div>
+            </a>
+            <div>
+                <nav aria-label="Primary">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero" aria-labelledby="welcome-title">
+            <div>
+                <h1 id="welcome-title" class="title">Welcome — glad you’re here</h1>
+                <p class="lead">This site is a small, modern starting point. Explore, learn, and get in touch.</p>
+            </div>
+
+            <div class="actions" aria-hidden="false">
+                <button class="btn btn-primary" onclick="cta()">Get started</button>
+                <a class="btn btn-ghost" href="#about">Learn more</a>
+                <button class="theme-toggle" id="themeToggle" aria-pressed="false" title="Toggle color theme">Toggle theme</button>
+            </div>
+
+            <form onsubmit="event.preventDefault(); subscribe()" aria-label="Subscribe form">
+                <label for="email" class="sr-only" style="position:absolute;left:-9999px">Email</label>
+                <input id="email" type="email" placeholder="Your email (optional)" />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <section id="features" class="grid" aria-label="Features">
+            <article class="card">
+                <h3 style="margin:0 0 .5rem">Fast & responsive</h3>
+                <p style="margin:0;color:var(--muted)">Built with modern HTML and CSS to look great on any device.</p>
+            </article>
+            <article class="card">
+                <h3 style="margin:0 0 .5rem">Accessible</h3>
+                <p style="margin:0;color:var(--muted)">Semantic markup and ARIA where needed for assistive tech.</p>
+            </article>
+            <article class="card">
+                <h3 style="margin:0 0 .5rem">Customizable</h3>
+                <p style="margin:0;color:var(--muted)">Easily adapt colors, layout, and content to your needs.</p>
+            </article>
+        </section>
+
+        <section id="about" class="card" aria-label="About this site">
+            <h2 style="margin-top:0">About</h2>
+            <p style="color:var(--muted);margin:0">This is an example landing page. Replace text, links, and images to make it yours.</p>
+        </section>
+
+        <footer id="contact">
+            <div style="margin-bottom:.5rem">Need help? <a href="mailto:hello@example.com">hello@example.com</a></div>
+            <div>&copy; <span id="year"></span> My Website</div>
+        </footer>
+    </main>
+
+    <script>
+        // Small interactivity: theme toggle, CTA, subscribe stub
+        const toggle = document.getElementById('themeToggle');
+        toggle.addEventListener('click', () => {
+            const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            document.documentElement.setAttribute('data-theme', dark ? 'light' : 'dark');
+            toggle.setAttribute('aria-pressed', String(!dark));
+        });
+
+        function cta(){ alert('Welcome! Replace this action with your onboarding flow.'); }
+        function subscribe(){
+            const email = document.getElementById('email').value;
+            alert(email ? `Thanks — ${email}` : 'Thanks for subscribing!');
+        }
+
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html></footer></article>
