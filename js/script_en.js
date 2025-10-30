@@ -30,8 +30,8 @@ function onYouTubeIframeAPIReady() {
       width: ytWidth,
       videoId: ytData[i]['id'],
       playerVars: {
-        loop: 1, // ループの設定
-        playlist: ytData[i]['id'] // 再生する動画のリスト
+        loop: 1, 
+        playlist: ytData[i]['id'] 
       },
       events: {
         'onReady': onPlayerReady,
