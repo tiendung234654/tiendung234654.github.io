@@ -1,14 +1,14 @@
-// プレーヤーのサイズを指定
+// player size
 var ytWidth = 640;
 var ytHeight = 390;
 
-// 埋め込むyoutubeのIDと埋め込むエリアを指定
+// place youtube video id in here
 var ytData = [
   {
-    id: 'HQVVcITYIpk',
+    id: 'GhX6UeQCWoI',
     area: 'cm'
   }, {
-    id: 'lno4upo3N0c',
+    id: 'GhX6UeQCWoI',
     area: 'making'
   }
 ];
