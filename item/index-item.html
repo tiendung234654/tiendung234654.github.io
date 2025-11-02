@@ -1,353 +1,459 @@
 <!DOCTYPE html><html lang="en" class="en">
   <<head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script type="text/javascript">
+    var _ua = (function(u) {
+      return {
+        Tablet: (u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) ||
+          u.indexOf("ipad") != -1 ||
+          (u.indexOf("android") != -1 && u.indexOf("mobile") == -1) ||
+          (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1) ||
+          u.indexOf("kindle") != -1 ||
+          u.indexOf("silk") != -1 ||
+          u.indexOf("playbook") != -1,
+        Mobile: (u.indexOf("windows") != -1 && u.indexOf("phone") != -1) ||
+          u.indexOf("iphone") != -1 ||
+          u.indexOf("ipod") != -1 ||
+          (u.indexOf("android") != -1 && u.indexOf("mobile") != -1) ||
+          (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1) ||
+          u.indexOf("blackberry") != -1
+      }
+    })(window.navigator.userAgent.toLowerCase());
+
+    if (_ua.Mobile) {
+      document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+    } else if (_ua.Tablet) {
+      document.write('<meta name="viewport" content="width=1280">');
+    } else {
+      document.write('<meta name="viewport" content="width=1280">');
+    }
+  </script>
+
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+
+  <!--currently useless -->
+  <meta name="description" content="This is the official website of CAN'TMAKE, a obscure cosmetic brand known by cute, unreasonable, and FACE THE SIN, SAVE THE E.G.O.">
+  
+  <!--Facebook specific loading preview-->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="CAN'TMAKE">
+  <meta property="og:url" content="https://tiendung234654.github.io/">
+  <meta property="og:image" content="images/thumb_fb.png">
+  <meta property="og:description" content="This is the official website of CAN'TMAKE, a obscure cosmetic brand known by cute, unreasonable, and FACE THE SIN, SAVE THE E.G.O.">
+  <meta property="og:site_name" content="CAN'TMAKE">
+
+  
+  <title>CAN'TMAKE</title> <!--title show on tab -->
+
+  <link rel="icon" href="/images/can_icon.ico">
+  <link rel="apple-touch-icon" href="/common/img/icon.png">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
+  <link href="/css/slick.css" rel="stylesheet">
+  <link href="/css/slick-theme.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+    
+  <!--Adobe font function-->
+  <script>
+    (function(d) {
+      var config = {
+          kitId: 'xgk6lzm',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+</head>
+
+
+
+<body class="global">
+
+  <!-- ////////////////////////////////////////////////// header start -->
+  <div class="head-wrap">
+    <div class="head-inner">
+
+      <header id="head">
+        <h1 class="head-logo"><a href="/index.html"><img src="/images/logo.svg" alt="CAN'TMAKE TOKYO" width="231" height="50"></a></h1>
+        <p id="btn-spmenu" class="sp-item"><a href="#" id="js-panel-btn"><span id="panel-btn-icon"></span><span class="font-en menu-text"></span></a></p>
+      </header>
+
+
+      <nav id="gnav-wrap">
+
+        <ul id="gnav">
+          <li class="nav"><a href="/concept/index-concept.html"><span class="gnav-en">CONCEPT</span></a></li>
+          <li class="nav"><a href="/item/index-item.html"><span class="gnav-en">ITEM</span></a></li>
+          <li class="nav"><a href=mailto:tiendung234654@gmail.com><span class="gnav-en">CONTACT</span></a></li>
+        </ul>
+
+        <ul class="head-sns">
+          <li><a href="https://www.instagram.com/lockheedmartin/" target="_blank" class="no-icon"><span class="icon-instagram"></span></a></li>
+          <li><a href="https://www.youtube.com/channel/UCJWcF0ex7_doPdIQGbVpDsQ" target="_blank" class="no-icon"><span class="icon-youtube"></span></a></li>
+          <li><a href="https://x.com/LockheedMartin" target="_blank" class="no-icon"><span class="icon-twitter"></span></a></li>
+          <li><a href="https://www.facebook.com/lockheedmartin" target="_blank" class="no-icon"><span class="icon-facebook"></span></a></li>
+        </ul>
+
+        <ul class="head-lang">
+          <li><a href="https://www.lockheedmartin.com/ja-jp/index.html">JP</a></li>
+          <li><a href="https://www.lockheedmartin.com/he-il/index.html" target="_blank" class="no-icon">HE</a></li>
+        </ul>
+
+      </nav>
+
+    </div>
+
+    <div class="head-modal" id="modal-shop">
+      
+  </div>
+
+  </div>
+  <!-- ////////////////////////////////////////////////// header end -->
+
+  <div id="wrapper">
+    <div id="contents">
+
+<main id="main">
+  <article>
+
+    <div class="box-center sp-pdg">
+      <div class="box-pattern02-wrap">
+
+        <section class="box-pattern02">
+          <div class="box-pattern02-inner w1040">
+            <h2 class="cmn-sct-ttl">
+              <span class="cmn-sct-ttl-enwrap">
+                <span class="cmn-sct-ttl-en">ITEM</span>
+              </span>
+            </h2>
+
+
+            <p class="item-bnr-newitem mb20"><a href="/en/item/new"><img src="images/bnr_newitem.png" width="1200" alt="NEW ITEM & COLOR New・NewColors" class="pc-item"><img src="images/bnr_newitem_sp.png" width="718" height="256" alt="NEW ITEM & COLOR New・NewColors" class="sp-item"></a></p>
+
             <div class="item-list-wrap">
 
-              <div>
-                <a href="/en/item/category/50">
-                  <img src="images/mmh_pc_en.png" alt="Make Me Happy" class="pc-item"><img src="images/mmh_sp_en.png" alt="Make Me Happy" class="sp-item">
-                <!DOCTYPE html>
-                <html lang="en" class="en">
-                <head>
-                  <meta charset="UTF-8">
-                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                  <script type="text/javascript">
-                    var _ua = (function(u) {
-                      return {
-                        Tablet: (u.indexOf("windows") != -1 && u.indexOf("touch") != -1 && u.indexOf("tablet pc") == -1) ||
-                          u.indexOf("ipad") != -1 ||
-                          (u.indexOf("android") != -1 && u.indexOf("mobile") == -1) ||
-                          (u.indexOf("firefox") != -1 && u.indexOf("tablet") != -1) ||
-                          u.indexOf("kindle") != -1 ||
-                          u.indexOf("silk") != -1 ||
-                          u.indexOf("playbook") != -1,
-                        Mobile: (u.indexOf("windows") != -1 && u.indexOf("phone") != -1) ||
-                          u.indexOf("iphone") != -1 ||
-                          u.indexOf("ipod") != -1 ||
-                          (u.indexOf("android") != -1 && u.indexOf("mobile") != -1) ||
-                          (u.indexOf("firefox") != -1 && u.indexOf("mobile") != -1) ||
-                          u.indexOf("blackberry") != -1
-                      }
-                    })(window.navigator.userAgent.toLowerCase());
+              
+                <!-- ////////////////////////////// ITEM SET start -->
+                <div class="item-list-set">
 
-                    if (_ua.Mobile) {
-                      document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
-                    } else if (_ua.Tablet) {
-                      document.write('<meta name="viewport" content="width=1280">');
-                    } else {
-                      document.write('<meta name="viewport" content="width=1280">');
-                    }
-                  </script>
-                  <meta name="format-detection" content="telephone=no,address=no,email=no">
-
-                  <meta name="description" content="This is the official website of CAN'TMAKE, a obscure cosmetic brand known by cute, unreasonable, and FACE THE SIN, SAVE THE E.G.O.">
-                  <meta property="og:type" content="article">
-                  <meta property="og:title" content="CAN'TMAKE">
-                  <meta property="og:url" content="https://tiendung234654.github.io/">
-                  <meta property="og:image" content="images/thumb_fb.png">
-                  <meta property="og:description" content="This is the official website of CAN'TMAKE, a obscure cosmetic brand known by cute, unreasonable, and FACE THE SIN, SAVE THE E.G.O.">
-                  <meta property="og:site_name" content="CAN'TMAKE">
-
-                  <title>CAN'TMAKE</title>
-
-                  <link rel="icon" href="/images/can_icon.ico">
-                  <link rel="apple-touch-icon" href="/common/img/icon.png">
-                  <link rel="stylesheet" href="/css/common.css">
-                  <link rel="stylesheet" href="/css/animate.css">
-                  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
-                  <link href="/css/slick.css" rel="stylesheet">
-                  <link href="/css/slick-theme.css" rel="stylesheet">
-                  <link href="/css/style.css" rel="stylesheet">
-
-                  <!--Adobe font function-->
-                  <script>
-                    (function(d) {
-                      var config = {
-                          kitId: 'xgk6lzm',
-                          scriptTimeout: 3000,
-                          async: true
-                        },
-                        h = d.documentElement,
-                        t = setTimeout(function() {
-                          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-                        }, config.scriptTimeout),
-                        tk = d.createElement("script"),
-                        f = false,
-                        s = d.getElementsByTagName("script")[0],
-                        a;
-                      h.className += " wf-loading";
-                      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-                      tk.async = true;
-                      tk.onload = tk.onreadystatechange = function() {
-                        a = this.readyState;
-                        if (f || a && a != "complete" && a != "loaded") return;
-                        f = true;
-                        clearTimeout(t);
-                        try {
-                          Typekit.load(config)
-                        } catch (e) {}
-                      };
-                      s.parentNode.insertBefore(tk, s)
-                    })(document);
-                  </script>
-
-                </head>
-
-                <body class="global">
-
-                  <!-- ////////////////////////////////////////////////// header start -->
-                  <div class="head-wrap">
-                    <div class="head-inner">
-
-                      <header id="head">
-                        <h1 class="head-logo"><a href="/index.html"><img src="/images/logo.svg" alt="CAN'TMAKE TOKYO" width="231" height="50"></a></h1>
-                        <p id="btn-spmenu" class="sp-item"><a href="#" id="js-panel-btn"><span id="panel-btn-icon"></span><span class="font-en menu-text"></span></a></p>
-                      </header>
-
-                      <nav id="gnav-wrap">
-
-                        <ul id="gnav">
-                          <li class="nav"><a href="/concept/index-concept.html"><span class="gnav-en">CONCEPT</span></a></li>
-                          <li class="nav"><a href="/item/index-item.html"><span class="gnav-en">ITEM</span></a></li>
-                          <li class="nav"><a href=mailto:tiendung234654@gmail.com><span class="gnav-en">CONTACT</span></a></li>
-                        </ul>
-
-                        <ul class="head-sns">
-                          <li><a href="https://www.instagram.com/lockheedmartin/" target="_blank" class="no-icon"><span class="icon-instagram"></span></a></li>
-                          <li><a href="https://www.youtube.com/channel/UCJWcF0ex7_doPdIQGbVpDsQ" target="_blank" class="no-icon"><span class="icon-youtube"></span></a></li>
-                          <li><a href="https://x.com/LockheedMartin" target="_blank" class="no-icon"><span class="icon-twitter"></span></a></li>
-                          <li><a href="https://www.facebook.com/lockheedmartin" target="_blank" class="no-icon"><span class="icon-facebook"></span></a></li>
-                        </ul>
-
-                        <ul class="head-lang">
-                          <li><a href="https://www.lockheedmartin.com/ja-jp/index.html">JP</a></li>
-                          <li><a href="https://www.lockheedmartin.com/he-il/index.html" target="_blank" class="no-icon">HE</a></li>
-                        </ul>
-
-                      </nav>
-
+                  <div class="item-list-thumb">
+                    <span class="item-list-img">
+                      <a href="/en/item/category/1"><img src="images/thumb_base.png" alt="" width="159" height="157" class="ofi-contain"></a>
+                    </span>
+                    <div class="item-list-text">
+                      <h3 class="item-list-ttl">
+                        <span class="item-list-ttl-en">BASE</span>
+                      </h3>
+                      <p class="item-list-view"><a href="/en/item/category/1" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
                     </div>
-
-                    <div class="head-modal" id="modal-shop"></div>
-
                   </div>
-                  <!-- ////////////////////////////////////////////////// header end -->
 
-                  <div id="wrapper">
-                    <div id="contents">
+                                      <ul class="item-list-cat">
+                                              <li><a href="/en/item/category/1#filter=.cat1" class="icon-arrow"><span class="icon-check">Concealer</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat2" class="icon-arrow"><span class="icon-check">Foundation</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat3" class="icon-arrow"><span class="icon-check">Face Powder</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat4" class="icon-arrow"><span class="icon-check">Highlighter</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat5" class="icon-arrow"><span class="icon-check">Shading</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat6" class="icon-arrow"><span class="icon-check">Base</span></a></li>
+                                              <li><a href="/en/item/category/1#filter=.cat7" class="icon-arrow"><span class="icon-check">Tool</span></a></li>
+                                          </ul>
+                  
+                </div>
+                <!-- ////////////////////////////// ITEM SET end -->
 
-                      <main id="main">
-                        <article>
+              
+                <!-- ////////////////////////////// ITEM SET start -->
+                <div class="item-list-set">
 
-                          <div class="box-center sp-pdg">
-                            <div class="box-pattern02-wrap">
+                  <div class="item-list-thumb">
+                    <span class="item-list-img">
+                      <a href="/en/item/category/2"><img src="images/thumb_cheek.png" alt="" width="159" height="157" class="ofi-contain"></a>
+                    </span>
+                    <div class="item-list-text">
+                      <h3 class="item-list-ttl">
+                        <span class="item-list-ttl-en">CHEEK</span>
+                      </h3>
+                      <p class="item-list-view"><a href="/en/item/category/2" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
+                    </div>
+                  </div>
 
-                              <section class="box-pattern02">
-                                <div class="box-pattern02-inner w1040">
-                                  <h2 class="cmn-sct-ttl">
-                                    <span class="cmn-sct-ttl-enwrap">
-                                      <span class="cmn-sct-ttl-en">ITEM</span>
-                                    </span>
-                                  </h2>
+                  
+                </div>
+                <!-- ////////////////////////////// ITEM SET end -->
 
-                                  <p class="item-bnr-newitem mb20"><a href="/en/item/new"><img src="images/bnr_newitem.png" width="1200" alt="NEW ITEM & COLOR New・NewColors" class="pc-item"><img src="images/bnr_newitem_sp.png" width="718" height="256" alt="NEW ITEM & COLOR New・NewColors" class="sp-item"></a></p>
+              
+                <!-- ////////////////////////////// ITEM SET start -->
+                <div class="item-list-set">
 
-                                  <div class="item-list-wrap">
+                  <div class="item-list-thumb">
+                    <span class="item-list-img">
+                      <a href="/en/item/category/3"><img src="images/thumb_eye.png" alt="" width="159" height="157" class="ofi-contain"></a>
+                    </span>
+                    <div class="item-list-text">
+                      <h3 class="item-list-ttl">
+                        <span class="item-list-ttl-en">EYE</span>
+                      </h3>
+                      <p class="item-list-view"><a href="/en/item/category/3" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
+                    </div>
+                  </div>
 
-                                    <!-- only CHEEK, LIP and NAIL -->
+                                      <ul class="item-list-cat">
+                                              <li><a href="/en/item/category/3#filter=.cat1" class="icon-arrow"><span class="icon-check">Eyeshadow</span></a></li>
+                                              <li><a href="/en/item/category/3#filter=.cat2" class="icon-arrow"><span class="icon-check">Mascara</span></a></li>
+                                              <li><a href="/en/item/category/3#filter=.cat3" class="icon-arrow"><span class="icon-check">Lash-care・Lash-Base</span></a></li>
+                                              <li><a href="/en/item/category/3#filter=.cat4" class="icon-arrow"><span class="icon-check">Eyebrow</span></a></li>
+                                              <li><a href="/en/item/category/3#filter=.cat5" class="icon-arrow"><span class="icon-check">Eyeliner</span></a></li>
+                                          </ul>
+                  
+                </div>
+                <!-- ////////////////////////////// ITEM SET end -->
 
-                                    <div class="item-list-set">
-                                      <div class="item-list-thumb">
-                                        <span class="item-list-img">
-                                          <a href="/en/item/category/2"><img src="images/thumb_cheek.png" alt="" width="159" height="157" class="ofi-contain"></a>
-                                        </span>
-                                        <div class="item-list-text">
-                                          <h3 class="item-list-ttl"><span class="item-list-ttl-en">CHEEK</span></h3>
-                                          <p class="item-list-view"><a href="/en/item/category/2" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
-                                        </div>
-                                      </div>
-                                    </div>
+              
+                <!-- ////////////////////////////// ITEM SET start -->
+                <div class="item-list-set">
 
-                                    <div class="item-list-set">
-                                      <div class="item-list-thumb">
-                                        <span class="item-list-img">
-                                          <a href="/en/item/category/4"><img src="images/thumb_lips.png" alt="" width="159" height="157" class="ofi-contain"></a>
-                                        </span>
-                                        <div class="item-list-text">
-                                          <h3 class="item-list-ttl"><span class="item-list-ttl-en">LIP</span></h3>
-                                          <p class="item-list-view"><a href="/en/item/category/4" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
-                                        </div>
-                                      </div>
-                                    </div>
+                  <div class="item-list-thumb">
+                    <span class="item-list-img">
+                      <a href="/en/item/category/4"><img src="images/thumb_lips.png" alt="" width="159" height="157" class="ofi-contain"></a>
+                    </span>
+                    <div class="item-list-text">
+                      <h3 class="item-list-ttl">
+                        <span class="item-list-ttl-en">LIP</span>
+                      </h3>
+                      <p class="item-list-view"><a href="/en/item/category/4" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
+                    </div>
+                  </div>
 
-                                    <div class="item-list-set">
-                                      <div class="item-list-thumb">
-                                        <span class="item-list-img">
-                                          <a href="/en/item/category/5"><img src="images/thumb_nails.png" alt="" width="159" height="157" class="ofi-contain"></a>
-                                        </span>
-                                        <div class="item-list-text">
-                                          <h3 class="item-list-ttl"><span class="item-list-ttl-en">NAIL</span></h3>
-                                          <p class="item-list-view"><a href="/en/item/category/5" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
-                                        </div>
-                                      </div>
-                                    </div>
+                                      <ul class="item-list-cat">
+                                              <li><a href="/en/item/category/4#filter=.cat1" class="icon-arrow"><span class="icon-check">Gloss・Liquid Rouge</span></a></li>
+                                              <li><a href="/en/item/category/4#filter=.cat2" class="icon-arrow"><span class="icon-check">Rouge</span></a></li>
+                                              <li><a href="/en/item/category/4#filter=.cat3" class="icon-arrow"><span class="icon-check">Lip Base・Lip Treatment</span></a></li>
+                                          </ul>
+                  
+                </div>
+                <!-- ////////////////////////////// ITEM SET end -->
 
-                                    <div>
-                                      <a href="/en/item/category/50">
-                                        <img src="images/mmh_pc_en.png" alt="Make Me Happy" class="pc-item"><img src="images/mmh_sp_en.png" alt="Make Me Happy" class="sp-item">
-                                      </a>
-                                    </div>
+              
+                <!-- ////////////////////////////// ITEM SET start -->
+                <div class="item-list-set">
 
-                                  </div><!-- //.item-list-wrap -->
+                  <div class="item-list-thumb">
+                    <span class="item-list-img">
+                      <a href="/en/item/category/5"><img src="images/thumb_nails.png" alt="" width="159" height="157" class="ofi-contain"></a>
+                    </span>
+                    <div class="item-list-text">
+                      <h3 class="item-list-ttl">
+                        <span class="item-list-ttl-en">NAIL</span>
+                      </h3>
+                      <p class="item-list-view"><a href="/en/item/category/5" class="btn-radius icon-arrow"><span class="icon-check">VIEW ALL</span></a></p>
+                    </div>
+                  </div>
 
-                                </div><!-- //.box-pattern02-inner -->
+                  
+                </div>
+                <!-- ////////////////////////////// ITEM SET end -->
 
-                              </section>
-
-                            </div><!-- //.box-pattern02-wrap -->
-
-                          </div><!-- //.box-center -->
-
-                        </article>
-                      </main>
-
-                    </div><!-- // #contents -->
-
-
-                    <!-- ////////////////////////////////////////////////// footer start -->
-                    <footer id="foot">
-                      <div class="box-center">
-                        <div class="foot-inner">
-
-                          <p class="foot-logo"><a href="/en/"><img src="images/foot_logo.svg" alt="CANMAKE TOKYO" width="200" height="44" title="CANMAKE TOKYO"></a></p>
-
-                          <div class="foot-nav-box-wrap pc-item -english">
-                            <div class="foot-nav-box">
-                              <ul class="foot-nav">
-                                <li><a href="/en/concept/"><span class="icon-arrow">CONCEPT</span></a></li>
-                                <li>
-                                  <script type="text/javascript">
-                                    function converter(M) {
-                                      var str = "",
-                                        str_as = "";
-                                      for (var i = 0; i < M.length; i++) {
-                                        str_as = M.charCodeAt(i);
-                                        str += String.fromCharCode(str_as + 1);
-                                      }
-                                      return str;
-                                    }
-
-                                    function mail_to_footerPc(k_1, k_2) {
-                                      eval(String.fromCharCode(108, 111, 99, 97, 116, 105, 111, 110, 46, 104, 114, 101, 102, 32,
-                                          61, 32, 39, 109, 97, 105, 108, 116, 111, 58) +
-                                        escape(k_1) +
-                                        converter(String.fromCharCode(100, 44, 98, 96, 109, 108, 96, 106, 100, 63, 104, 99, 96, 102, 113, 110, 116, 111, 45, 105, 111,
-                                          62, 114, 116, 97, 105, 100, 98, 115, 60)) +
-                                        escape(k_2) + "'");
-                                    }
-                                    document.write('<a href=JavaScript:mail_to_footerPc("","")><span class="icon-arrow">CONTACT</span><\/a>');
-                                  </script>
-                                  <noscript>CONTACT</noscript>
-                                </li>
-                              </ul>
-                            </div>
-                            <div class="foot-nav-box">
-                              <ul class="foot-nav">
-                                <li><a href="/en/item/"><span class="icon-arrow">ITEM</span></a></li>
-                              </ul>
-                              <ul class="foot-nav-child">
-                                <li><a href="/en/item/category/1"><span>BASE MAKEUP</span></a></li>
-                                <li><a href="/en/item/category/2"><span>CHEEKS</span></a></li>
-                                <li><a href="/en/item/category/3"><span>EYES</span></a></li>
-                                <li><a href="/en/item/category/4"><span>LIPS</span></a></li>
-                                <li><a href="/en/item/category/5"><span>NAILS</span></a></li>
-                                <li><a href="/en/item/category/50"><span>Make me Happy</span></a></li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <ul class="foot-sp-nav sp-item">
-                            <li>
-                              <a href="/en/concept/">
-                                <span class="foot-sp-nav-en">CONCEPT</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/en/item/">
-                                <span class="foot-sp-nav-en">ITEM</span>
-                              </a>
-                            </li>
-                            <li>
-                              <script type="text/javascript">
-                                function converter(M) {
-                                  var str = "",
-                                    str_as = "";
-                                  for (var i = 0; i < M.length; i++) {
-                                    str_as = M.charCodeAt(i);
-                                    str += String.fromCharCode(str_as + 1);
-                                  }
-                                  return str;
-                                }
-
-                                function mail_to_footerSp(k_1, k_2) {
-                                  eval(String.fromCharCode(108, 111, 99, 97, 116, 105, 111, 110, 46, 104, 114, 101, 102, 32,
-                                      61, 32, 39, 109, 97, 105, 108, 116, 111, 58) +
-                                    escape(k_1) +
-                                    converter(String.fromCharCode(100, 44, 98, 96, 109, 108, 96, 106, 100, 63, 104, 99, 96, 102, 113, 110, 116, 111, 45, 105, 111,
-                                      62, 114, 116, 97, 105, 100, 98, 115, 60)) +
-                                    escape(k_2) + "'");
-                                }
-                                document.write('<a href=JavaScript:mail_to_footerSp("","")><span class="foot-sp-nav-en">CONTACT</span><\/a>');
-                              </script>
-                              <noscript>CONTACT</noscript>
-                            </li>
-                          </ul>
-                        </div><!-- // .foot-inner -->
-
-                        <div class="foot-utility-wrap">
-                          <ul class="foot-sns">
-                            <li>
-                              <a href="https://www.instagram.com/canmaketokyo/" target="_blank" class="no-icon">
-                                <span class="icon-instagram">Instagram</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="https://www.youtube.com/channel/UCEZiJVcL_4woHJv7LebGsoQ" target="_blank" class="no-icon">
-                                <span class="icon-youtube">Youtube</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="https://twitter.com/CanmakeTokyo" target="_blank" class="no-icon">
-                                <span class="icon-twitter">X</span>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="https://www.facebook.com/CANMAKE.TOKYO" target="_blank" class="no-icon">
-                                <span class="icon-facebook">Facebook</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-
-                        <div class="foot-btm">
-                          <p class="foot-trademark">Copyright © CANMAKE ALL RIGHT RESERVED. CANMAKETM Ida Laboratories Inc.</p>
-                          <p class="foot-copyright">© IDA Laboratories Co., Ltd. All Right Reserved.</p>
-                        </div>
-
-                      </div><!-- // .box-center -->
-                      <p id="pagetop"><a href="#"><span class="icon-arrow">PAGETOP</span></a></p>
-                    </footer>
-                    <!-- ////////////////////////////////////////////////// footer end -->
+              
+              <div>
+                                <a href="/en/item/category/50">
+                  <img src="images/mmh_pc_en.png" alt="Make Me Happy" class="pc-item"><img src="images/mmh_sp_en.png" alt="Make Me Happy" class="sp-item">
+                </a>
+              </div>
 
 
-                  </div><!-- // #wrapper -->
 
-                  <script src="js/jquery-3.2.1.min.js"></script>
-                  <script src="js/ofi.min.js"></script>
-                  <!-- <script src="/common/js/lib/pace.min.js?v=1603178728"></script> -->
-                  <script src="js/app_rsp.js"></script>
-                  <script src="js/scrolla.jquery.min.js"></script>
-                  <script src="js/common.js"></script>
+            </div><!-- //.item-list-wrap -->
 
-                </body>
-                </html>
+          </div><!-- //.box-pattern02-inner -->
+
+        </section>
+
+      </div><!-- //.box-pattern02-wrap -->
+
+
+    </div><!-- //.box-center -->
+
+
+
+
+
+
+  </article>
+</main>
+
+</div><!-- // #contents -->
+
+
+
+<!-- ////////////////////////////////////////////////// footer start -->
+<footer id="foot">
+  <div class="box-center">
+    <div class="foot-inner">
+
+      <p class="foot-logo"><a href="/en/"><img src="images/foot_logo.svg" alt="CANMAKE TOKYO" width="200" height="44" title="CANMAKE TOKYO"></a></p>
+
+      <div class="foot-nav-box-wrap pc-item -english">
+        <div class="foot-nav-box">
+          <ul class="foot-nav">
+            <li><a href="/en/concept/"><span class="icon-arrow">CONCEPT</span></a></li>
+            <li>
+              <script type="text/javascript">
+                <!--
+                function converter(M) {
+                  var str = "",
+                    str_as = "";
+                  for (var i = 0; i < M.length; i++) {
+                    str_as = M.charCodeAt(i);
+                    str += String.fromCharCode(str_as + 1);
+                  }
+                  return str;
+                }
+
+                function mail_to_footerPc(k_1, k_2) {
+                  eval(String.fromCharCode(108, 111, 99, 97, 116, 105, 111, 110, 46, 104, 114, 101, 102, 32,
+                      61, 32, 39, 109, 97, 105, 108, 116, 111, 58) +
+                    escape(k_1) +
+                    converter(String.fromCharCode(100, 44, 98, 96, 109, 108, 96, 106, 100, 63, 104, 99, 96, 102, 113, 110, 116, 111, 45, 105, 111,
+                      62, 114, 116, 97, 105, 100, 98, 115, 60)) +
+                    escape(k_2) + "'");
+                }
+                document.write('<a href=JavaScript:mail_to_footerPc("","")><span class="icon-arrow">CONTACT</span><\/a>');
+                //
+                -->
+              </script>
+              <noscript>CONTACT</noscript>
+            </li>
+          </ul>
+        </div>
+        <div class="foot-nav-box">
+          <ul class="foot-nav">
+            <li><a href="/en/item/"><span class="icon-arrow">ITEM</span></a></li>
+          </ul>
+          <ul class="foot-nav-child">
+            <li><a href="/en/item/category/1"><span>BASE MAKEUP</span></a></li>
+            <li><a href="/en/item/category/2"><span>CHEEKS</span></a></li>
+            <li><a href="/en/item/category/3"><span>EYES</span></a></li>
+            <li><a href="/en/item/category/4"><span>LIPS</span></a></li>
+            <li><a href="/en/item/category/5"><span>NAILS</span></a></li>
+            <!--<li><a href="/en/item/category/6"><span>ACCESSORIES</span></a></li>-->
+            <li><a href="/en/item/category/50"><span>Make me Happy</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="foot-sp-nav sp-item">
+        <li>
+          <a href="/en/concept/">
+            <span class="foot-sp-nav-en">CONCEPT</span>
+          </a>
+        </li>
+        <li>
+          <a href="/en/item/">
+            <span class="foot-sp-nav-en">ITEM</span>
+          </a>
+        </li>
+        <li>
+          <script type="text/javascript">
+            <!--
+            function converter(M) {
+              var str = "",
+                str_as = "";
+              for (var i = 0; i < M.length; i++) {
+                str_as = M.charCodeAt(i);
+                str += String.fromCharCode(str_as + 1);
+              }
+              return str;
+            }
+
+            function mail_to_footerSp(k_1, k_2) {
+              eval(String.fromCharCode(108, 111, 99, 97, 116, 105, 111, 110, 46, 104, 114, 101, 102, 32,
+                  61, 32, 39, 109, 97, 105, 108, 116, 111, 58) +
+                escape(k_1) +
+                converter(String.fromCharCode(100, 44, 98, 96, 109, 108, 96, 106, 100, 63, 104, 99, 96, 102, 113, 110, 116, 111, 45, 105, 111,
+                  62, 114, 116, 97, 105, 100, 98, 115, 60)) +
+                escape(k_2) + "'");
+            }
+            document.write('<a href=JavaScript:mail_to_footerSp("","")><span class="foot-sp-nav-en">CONTACT</span><\/a>');
+            //
+            -->
+          </script>
+          <noscript>CONTACT</noscript>
+        </li>
+      </ul>
+    </div><!-- // .foot-inner -->
+
+
+    <div class="foot-utility-wrap">
+      <ul class="foot-sns">
+        <li>
+          <a href="https://www.instagram.com/canmaketokyo/" target="_blank" class="no-icon">
+            <span class="icon-instagram">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCEZiJVcL_4woHJv7LebGsoQ" target="_blank" class="no-icon">
+            <span class="icon-youtube">Youtube</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/CanmakeTokyo" target="_blank" class="no-icon">
+            <span class="icon-twitter">X</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/CANMAKE.TOKYO" target="_blank" class="no-icon">
+            <span class="icon-facebook">Facebook</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="foot-btm">
+      <p class="foot-trademark">Copyright © CANMAKE ALL RIGHT RESERVED. CANMAKETM Ida Laboratories Inc.</p>
+      <p class="foot-copyright">© IDA Laboratories Co., Ltd. All Right Reserved.</p>
+    </div>
+
+  </div><!-- // .box-center -->
+  <p id="pagetop"><a href="#"><span class="icon-arrow">PAGETOP</span></a></p>
+</footer>
+<!-- ////////////////////////////////////////////////// footer end -->
+
+
+
+</div><!-- // #wrapper -->
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/ofi.min.js"></script>
+<!-- <script src="/common/js/lib/pace.min.js?v=1603178728"></script> -->
+<script src="js/app_rsp.js"></script>
+<script src="js/scrolla.jquery.min.js"></script>
+<script src="js/common.js"></script>
+
+
+
+
+</body></html>
